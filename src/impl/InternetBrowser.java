@@ -8,6 +8,10 @@ public class InternetBrowser implements SmartApplication {
 
     private String pageURL;
 
+    public InternetBrowser(String pageURL) {
+        this.pageURL = pageURL;
+    }
+
     @Override
     public void goToHomeScreen(){
         System.out.println("Now in HomeScreen");
