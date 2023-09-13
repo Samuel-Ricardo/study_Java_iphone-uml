@@ -21,3 +21,5 @@ Based on the iPhone launch video as per the link below, use a UML tool of your c
 * Music Player: play, pause, select music
 * Telephone Device: call, answer, startCorrerioVoz
 * Internet Browser: displayPage, addNewTab, updatePage
+
+![java_uml](https://github.com/Samuel-Ricardo/study_Java_iphone-uml/assets/63983021/859aeedf-d0cb-465c-aabb-f2209f15657c)
