@@ -6,7 +6,7 @@ public class MusicPlayer implements SmartApplication {
 
     private String selectedSong;
 
-    MusicPlayer(){}
+    public MusicPlayer(){}
 
     @Override
     public void goToHomeScreen(){

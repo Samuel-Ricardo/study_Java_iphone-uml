@@ -28,7 +28,7 @@ public class Phone implements SmartApplication {
 
     public void startCall(Contact contact){
         this.contactList.add(contact);
-        System.out.println("Start a call for: "+contact.toString());
+        System.out.println("Start a call for: "+contact.getNumber());
     }
 
     public void acceptCall() {

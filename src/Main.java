@@ -1,17 +1,39 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import impl.Contact;
+import impl.InternetBrowser;
+import impl.MusicPlayer;
+import impl.Phone;
+import interfaces.SmartApplication;
+
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        MusicPlayer player = new MusicPlayer();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        player.select("Pedro");
+        player.play();
+        player.pause();
+
+        InternetBrowser browser = new InternetBrowser("http://localhost:3000");
+
+        browser.addNewGuide();
+        browser.openPage("http://localhost:3000/pedro/fotos");
+        browser.reloadPage();
+
+        Phone phone = new Phone(new ArrayList<Contact>());
+
+        phone.startCall(new Contact("pedro","+12 93456-7890"));
+        phone.acceptCall();
+        phone.startVoicemail();
+        phone.getContactList().forEach(contact -> System.out.println("Contact: "+contact.getName()));
+
+        SmartApplication app = phone;
+        app = player;
+        app = browser;
+
+        app.goToHomeScreen();
+        app.stop();
+
     }
 }
